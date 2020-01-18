@@ -11,3 +11,11 @@ resource "aws_security_group_rule" "ssh" {
 
     security_group_id = "${aws_security_group.master_node.id}"
 }
+
+resource "aws_security_group_rule" "egress_allow_all" {
+    type = "egress"
+    from_port = 0
+    to_port = 0
+    protocol = "-1"
+    security_group_id = "${aws_security_group.master_node.id}"
+}
