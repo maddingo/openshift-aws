@@ -1,4 +1,4 @@
-resource "aws_security_group" "masternode" {
+resource "aws_security_group" "master_node" {
     vpc_id = "${data.aws_vpc.openshift_vpc.id}"
 }
 
@@ -9,5 +9,5 @@ resource "aws_security_group_rule" "ssh" {
     protocol = "tcp"
     cidr_blocks = "${var.access_cidr_ssh}"
 
-    security_group_id = "${aws_security_group.masternode.id}"
+    security_group_id = "${aws_security_group.master_node.id}"
 }

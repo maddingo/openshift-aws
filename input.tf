@@ -10,4 +10,19 @@ variable "ami_filter" {
 
 variable "access_cidr_ssh" {
   description = "CIDR for SSH access"
+  type = list
+}
+
+variable "keyname" {
+  description = "Name of the SSH key"
+}
+
+variable "volume_size" {
+  description = "Disk size"
+  default = "30"
+}
+
+variable "instance_type" {
+  description = "AWS instance type"
+  default = "t3.micro"
 }
