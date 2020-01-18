@@ -18,4 +18,7 @@ resource "aws_security_group_rule" "egress_allow_all" {
     to_port = 0
     protocol = "-1"
     security_group_id = aws_security_group.master_node.id
+
+    cidr_blocks = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
 }
