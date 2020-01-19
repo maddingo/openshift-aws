@@ -5,7 +5,7 @@ variable "openshift_vpc_name" {
 
 variable "ami_filter" {
   description = "Name expression of the AMI"
-  default = "CentOS Linux 7 x86_64 HVM EBS ENA *"
+  default = "openshift-aws *"
 }
 
 variable "access_cidr_ssh" {

@@ -13,8 +13,7 @@ data "aws_ami" "openshift_master" {
     values = [var.ami_filter]
   }
 
-#  owners = ["self"]
-  owners = ["679593333241"] # centos.org?
+  owners = ["self"]
 }
 
 resource "aws_instance" "master_node" {
